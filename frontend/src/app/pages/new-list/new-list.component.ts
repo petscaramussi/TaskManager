@@ -15,12 +15,13 @@ export class NewListComponent {
       {
         next: response => {
           console.log(response);
-          console.log('foi');
+          // Navigate to /lists/response._id
         },
         error: error => {
           console.log(error);
         }
       }
     );
+
   }
 }

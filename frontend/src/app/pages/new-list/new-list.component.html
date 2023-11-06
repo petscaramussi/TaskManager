@@ -5,11 +5,13 @@
             Create a new list
         </h1>
 
-        <input class="input has-background-light" type="text" placeholder="Find a repository">
-        <a class="button is-primary has-text-white">
-            Create
-        </a>
+        <input #listTitleInput class="input has-background-light" type="text" placeholder="Enter list name...">
+        <br><br>
 
+        <div class="buttons is-right">
+            <button class="button" routerLink="/">Cancel</button>
+            <button class="button is-primary has-text-white" (click)="createList(listTitleInput.value)">Create</button>
+        </div>
 
     </div>
 </div>
