@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskViewComponent } from './pages/task-view/task-view.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginComponent } from './pages/login/login.component';
-import { WebReqInterceptor } from './web-req.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,9 +22,7 @@ import { WebReqInterceptor } from './web-req.interceptor';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: WebReqInterceptor, multi: true}
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
